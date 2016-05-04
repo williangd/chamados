@@ -1,0 +1,6 @@
+NOME: Sistema de helpdesk
+PUBLICO: Inicialmente a empresa onde trabalho.
+COMO VOCE PRETENDE FAZER: Como alguns outros sistemas já existentes (zendesk, freshdesk, etc), mas com algumas necessidades que não são supridas por eles.
+QUAIS TECNOLOGIAS: HTML, CSS, JavaScript, Angular, provavelmente MySQL como banco, Backend não definido ainda.
+QUAIS DIFICULDADES: Tenho que aprender mais JavaScript, aprender algular do zero e alguma línguagem para usar de backup.
+PORQUE: Vontade de aprender a programar para Web e quero trabalhar com isso.

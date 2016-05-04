@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="zdesk">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/zdesk.css">
+</head>
+<body ng-controller="IndexCtrl as vm">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">ZDesk</a>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container-fluid" id="listaChamados">
+    <h3 class="page-header">Chamados abertos</h3>
+		<table class="table table-hover">
+			<thead>
+			  <tr>
+			    <th>ID</th>
+			    <th>Título</th>
+			    <th>Solicitante</th>
+			    <th>Empresa</th>
+          <th>Opções</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat="(key, ticket) in vm.tickets">
+			    <td ng-bind="ticket.ID"></td>
+			    <td ng-bind="ticket.titulo">{{vm.chamados.titulo}}</td>
+			    <td ng-bind="ticket.solicitante">{{vm.chamados.solicitante}}</td>
+			    <td ng-bind="ticket.empresa">{{vm.chamados.empresa}}</td>
+          <td><button class="btn btn-danger btn-xs" ng-click="vm.remove(key)">Apagar</button></td>
+			  </tr>
+			</tbody>
+		</table>
+	</div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controllers.js"></script>
+</body>
+</html>
