@@ -21,6 +21,19 @@
     		"solicitante": "Rodrigo da Silva",
     		"empresa": "Terra" }
       ];
+
+      vm.save = function(form) {
+        if(form.$valid) {
+          vm.tickets.push(angular.copy(vm.ticket));
+          vm.ticket = {};
+        }
+      };
+
+      vm.remove = function(key) {
+        if(confirm('Tem certeza que deseja deletar?')) {
+          vm.tickets.splice(key,1);
+        }
+      };
     };
 
 
